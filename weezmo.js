@@ -1,5 +1,5 @@
 try {
-    ga('set', 'userId', '<dynamic user id here>');
+    ga('set', 'userId', '5A89Vl3neQL6abPu6Jx93xkDSvat1U');
 }
 catch (err) {
     console.log(err);
