@@ -1,9 +1,5 @@
 try {
-    var weezmo_module_bis_id = '53892bb6-f8dd-4509-a8ad-fef13c9336bf';
-    ga('create', 'UA-67065974-3', 'auto', 'wtracker', {
-        userId: '5A89Vl3neQL6abPu6Jx93xkDSvat1U'
-    });
-    ga('wtracker.send', 'pageview');
+    ga('set', 'userId', '<dynamic user id here>');
 }
 catch (err) {
     console.log(err);
