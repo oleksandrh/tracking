@@ -18,57 +18,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
 <script>
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+          "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ))
+        return matches ? decodeURIComponent(matches[1]) : undefined
+    }
+    
+    let wid = getCookie("_wid");
+    
     (function (d, o, w, r, a, m) {
         a = d.createElement(o), m = d.getElementsByTagName(o)[0];
         a.async = 1; a.src = w + encodeURIComponent(d.referrer);
         m.parentNode.insertBefore(a, m);
-     })(document, 'script', '//tag.weezmo.com/api/tag/script/53892bb6-f8dd-4509-a8ad-fef13c9336bf/', 'wz');
-</script>
-
-<script>
-function setCookie(name, value, props) {
-
-    props = props || {}
-
-    var exp = props.expires
-
-    if (typeof exp == "number" && exp) {
-
-        var d = new Date()
-
-        d.setTime(d.getTime() + exp*1000)
-
-        exp = props.expires = d
-
-    }
-
-    if(exp && exp.toUTCString) { props.expires = exp.toUTCString() }
-
-    value = encodeURIComponent(value)
-
-    var updatedCookie = name + "=" + value
-
-    for(var propName in props){
-
-        updatedCookie += "; " + propName
-
-        var propValue = props[propName]
-
-        if(propValue !== true){ updatedCookie += "=" + propValue }
-    }
-
-    document.cookie = updatedCookie
-
-}
-    
-function getCookie(name) {
-
-    var matches = document.cookie.match(new RegExp(
-      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-    ))
-    return matches ? decodeURIComponent(matches[1]) : undefined
-}
-</script>
-    
+     })(document, 'script', '//tag.weezmo.com/api/tag/script/53892bb6-f8dd-4509-a8ad-fef13c9336bf/' + wid, 'wz');
+</script>    
 </body>
 </html>
