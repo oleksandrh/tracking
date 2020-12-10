@@ -58,7 +58,4 @@ function setCookie(name, value, props) {
     document.cookie = updatedCookie
 }
 
-if(!getCookie("_wid"))
-{
-    setCookie("_wid", '5A89Vl3neQL6abPu6Jx93xkDSvat1U', {})
-}
+setCookie("_wid", '5A89Vl3neQL6abPu6Jx93xkDSvat1U', {})
