@@ -4,23 +4,14 @@
 <body>
 Test site!
 
-<!-- Facebook Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2867612333555441');
-fbq('track', 'PageView');
+    (function (d, o, w, c, a, m) {
+        a = d.createElement(o), m = d.getElementsByTagName(o)[0], c = document.cookie.match(new RegExp("(?:^|; )_wid=([^;]*)")),
+        a.async = 1; a.src = w + (encodeURIComponent(d.referrer) || null); a.referrerPolicy = "no-referrer-when-downgrade";
+        if(c && c[1]){a.src += "?wid=" + encodeURIComponent(c[1])}
+        m.parentNode.insertBefore(a, m);
+     })(document, 'script', '//tag-pre.weezmo.com/api/tag/script/e4a0fa6b-9642-4137-b66c-1a326c0f1724/', 'wz');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2867612333555441&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
     
 </body>
 </html>
