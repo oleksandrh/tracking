@@ -4,13 +4,40 @@
 <body>
 Test site!
 
+<!-- Global site tag (gtag.js) - Google Ads: 784999311 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-784999311"></script>
 <script>
-    (function (d, o, w, c, a, m) {
-        a = d.createElement(o), m = d.getElementsByTagName(o)[0], c = document.cookie.match(new RegExp("(?:^|; )_wid=([^;]*)")),
-        a.async = 1; a.src = w + (encodeURIComponent(d.referrer) || null); a.referrerPolicy = "no-referrer-when-downgrade";
-        if(c && c[1]){a.src += "?wid=" + encodeURIComponent(c[1])}
-        m.parentNode.insertBefore(a, m);
-     })(document, 'script', '//tag-staging.weezmo.com/api/tag/script/e4a0fa6b-9642-4137-b66c-1a326c0f1724/', 'wz');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-784999311');
+</script>
+
+ <script type='application/javascript'>
+              window.addEventListener('load', function() {
+                var script = document.createElement('script');
+                script.setAttribute('type', 'application/javascript');
+                script.setAttribute('src', 'https://fortcdn.com/staticfiles/fb-web/js/fortvision-fb-web-watcher-script-19.js');
+                script.setAttribute('watcher_id','6956158f-7c68-46a6-ba19-a0f373344624');
+                document.head.appendChild(script);
+              });
+          </script>
+
+
+<script>
+    
+    window.custom = function(rct){
+        
+          gtag('event', 'conversion', {
+              'send_to': 'AW-784999311/rCZRCJTF1KcBEI_HqPYC',
+              'value': rct.total,
+              'currency': 'ILS',
+              'transaction_id': rct.transactionNumber
+          });
+  
+    }
+    
 </script>
     
 </body>
