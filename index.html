@@ -4,13 +4,15 @@
 <body>
 Test site!
 
-    <script>
-    (function (d, o, w, c, a, m) {
-        a = d.createElement(o), m = d.getElementsByTagName(o)[0], c = document.cookie.match(new RegExp("(?:^|; )_wid=([^;]*)")),
-        a.async = 1; a.src = w + (encodeURIComponent(d.referrer) || null); a.referrerPolicy = "no-referrer-when-downgrade";
-        if(c && c[1]){a.src += "?wid=" + encodeURIComponent(c[1])}
-        m.parentNode.insertBefore(a, m);
-     })(document, 'script', '//tag.weezmo.com/api/tag/script/6a19182f-8025-48bf-8cd6-3d9b52db24a4/', 'wz');
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186061663-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-186061663-1');
 </script>
 </body>
 </html>
