@@ -2,17 +2,41 @@
 <head>
 </head>
 <body>
-Test site!
+After submitting a form your _ga cookie will be sended to Weezmo.
+<form>
+    <input type="text" placeholder="phone"/>
+    <input id="send-event" type="submit" value="Submit" />
+</form>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186061663-1">
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HL39Y9CM71"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-186061663-1');
+  //gtag('config', 'G-HL39Y9CM71');
 </script>
+  
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  
+ <script>
+   String.prototype.hashCode = function() {
+  var hash = 0,
+    i, chr;
+  if (this.length === 0) return hash;
+  for (i = 0; i < this.length; i++) {
+    chr = this.charCodeAt(i);
+    hash = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+}   
+   $("#send-event").click((event) => {
+     gtag('config', ''G-HL39Y9CM71', {
+    'user_id': event.target.value.hashCode()
+    });
+   });
+ </script>
 </body>
 </html>
