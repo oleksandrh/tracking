@@ -3,10 +3,8 @@
 </head>
 <body>
 After submitting a form your phone number hash (SHA-256) will be sent to GA4.
-<form>
-    <input type="text" placeholder="phone"/>
-    <input id="send-event" type="submit" value="Submit" />
-</form>
+<input type="text" placeholder="phone" id="phone"/>
+<input id="send-event" type="submit" value="Submit" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL39Y9CM71"></script>
@@ -36,10 +34,11 @@ After submitting a form your phone number hash (SHA-256) will be sent to GA4.
     return hashHex;
 }  
    $("#send-event").click(async (event) => {
-       const userid = await sha256(event.target.value);
+       var phone = $("#phone").val();
+       const c = await sha256(phone);
      gtag('config', 'G-HL39Y9CM71', 
           {
-            'user_id': await sha256(event.target.value)
+            'user_id': phones
         });
    });
  </script>
