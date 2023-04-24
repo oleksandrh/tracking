@@ -35,10 +35,10 @@ After submitting a form your phone number hash (SHA-256) will be sent to GA4.
 }  
    $("#send-event").click(async (event) => {
        var phone = $("#phone").val();
-       const c = await sha256(phone);
+       const userId = await sha256(phone);
      gtag('config', 'G-HL39Y9CM71', 
           {
-            'user_id': phones
+            'user_id': userId
         });
    });
  </script>
